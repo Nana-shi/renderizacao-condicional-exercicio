@@ -35,16 +35,16 @@ export const SendButton = styled.button`
 `;
 
 export const RegisterButton = styled.button`
-    background-color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 200px;
-    padding: 10px;
-    :hover{
-        background-color: black;
-        color: white;
-    }
-`
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 200px;
+  padding: 10px;
+  :hover {
+    background-color: black;
+    color: white;
+  }
+`;
 
 export const StyledLabel = styled.label`
   width: 300px;
