@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import TelaLogin from "./components/TelaLogin/TelaLogin";
 import TelaCadastro from "./components/TelaCadastro/TelaCadastro";
+import TelaCadastroEndereco from "./components/TelaCadastroEndereco/TelaCadastroEndereco";
 import TelaUsuarioCadastrado from "./components/TelaUsuarioCadastrado/TelaUsuarioCadastrado.js";
 import { useState } from "react";
 
@@ -10,17 +11,17 @@ const GlobalStyled = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
   }
-`
+`;
 const MainContainer = styled.main`
   height: 100vh;
-`
+`;
 
 function App() {
-  const [valorCondicional, setValorCondicional] = useState(1)
+  const [valorCondicional, setValorCondicional] = useState(1);
 
   const mudarTela = (valor) => {
-    setValorCondicional(valor)
-  }
+    setValorCondicional(valor);
+  };
 
   // Resolução do exercício de fixação
   const renderizaTela = () => {
@@ -30,12 +31,16 @@ function App() {
       case 2:
         return <TelaCadastro mudarTela={mudarTela} />;
       case 3:
-        return <TelaUsuarioCadastrado />
+        return <TelaCadastroEndereco mudarTela={mudarTela} />;
+      case 4:
+        return <TelaUsuarioCadastrado />;
+      default:
+        return <TelaLogin mudarTela={mudarTela} />;
     }
-  }
+  };
 
   return (
-    <MainContainer >
+    <MainContainer>
       <GlobalStyled />
       {renderizaTela()}
     </MainContainer>

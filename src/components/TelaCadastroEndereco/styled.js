@@ -34,7 +34,7 @@ export const SendButton = styled.button`
   cursor: pointer;
 `;
 
-export const BackToLoginButton = styled.button`
+export const RegisterButton = styled.button`
   background-color: white;
   border-radius: 8px;
   cursor: pointer;
@@ -51,4 +51,16 @@ export const StyledLabel = styled.label`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+export const BackToLoginButton = styled.button`
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 200px;
+  padding: 10px;
+  :hover {
+    background-color: black;
+    color: white;
+  }
 `;
